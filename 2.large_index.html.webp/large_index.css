@@ -1,0 +1,255 @@
+/* ------------------- GLOBAL RESET ------------------- */
+* {
+  box-sizing: border-box;
+  
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  background-color: white;
+  color: black;
+  overflow-x: hidden;
+}
+
+
+/* ------------------ TOP-PANEL ------------------*/
+
+/* ------------------- HEADER ------------------- */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75em;
+  background-color: #f1d9c4;
+  padding: 8px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+  list-style-type: none;
+}
+
+.header a {
+  text-decoration: underline;
+  color: blue;
+}
+
+.header a:hover {
+  text-decoration: underline;
+  color: #001f80;
+}
+
+.header .separator {
+  color: #d9bfa4;
+}
+
+/* ------------------- MAIN ------------------- */
+main {
+  display: flex;
+  flex: 1;
+  gap: 2em;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ------------------- LEFT (CONTENT) ------------------- */
+.left {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}
+
+
+.left h2 {
+  
+  color: black;
+}
+
+.left p {
+  
+  margin-left: 0;
+}
+
+/* ------------------- TABLE ------------------- */
+.table1 h5 {
+  text-align: center;
+  margin: 0;
+}
+.table1 table {
+  margin: auto;
+  border-collapse: collapse; 
+  border: 4px dashed bisque;
+  align-items: center;
+  text-align: center;
+}
+
+.table1 th,
+.table1 td {
+  border: 3px solid bisque; 
+  padding: 0.5em;
+  text-align: center;
+}
+
+.table1 th:first-child,
+.table1 td:first-child {
+  border-left: none; 
+}
+
+.table1 th:last-child,
+.table1 td:last-child {
+  border-right: none; 
+}
+
+.table1 tr:first-child th {
+  border-top: none; 
+}
+
+.table1 tr:last-child td {
+  border-bottom: none;
+}
+
+/* ------------------- PICTURE ------------------- */
+img {
+  
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 15px;
+}
+
+figcaption {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+}
+
+/* ------------------- RIGHT (SIDEBAR) ------------------- */
+.right {
+  float: right;
+  background-color: #f1d9c4;
+  border: rgb(206, 153, 88) 2px dashed;
+  min-width: 250px;
+  min-height: 350px;
+  margin: 10px;
+  text-decoration: underline
+  
+}
+
+
+
+
+.right a {
+  text-decoration: none;
+  color: blue;
+}
+
+.right a:hover {
+  text-decoration: underline;
+}
+/* ------------------- p1stretched ------------------- */
+.p1stretched {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ------------------- FOOTER ------------------- */
+footer {
+  background-color: #f6e6d6;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  
+  font-weight: bold;
+}
+
+footer a {
+  color: blue;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+@media (max-width: 600px) {
+  main {
+    flex-direction: column;
+  }
+  .header {
+    flex-direction: column;  
+    align-items: flex-start; 
+    text-align: left;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+  }
+
+  .header li {
+    display: list-item;      
+    list-style-type: disc;   
+    margin-left: 1.5em;      
+  }
+
+  .header .separator {
+    display: none;           
+  }
+  .top-panels {
+    display: flex;
+    flex-direction: row;      
+    
+    align-items: flex-start;
+    gap: 10px;
+    margin:  0;
+    max-width: 1200px;
+    flex-wrap: nowrap;         
+    font-size: 17px;
+  }
+
+  .header .separator {
+    display: none;
+  }
+  .right {
+    order: -1;
+    width: 100%;
+    background-color: #f1d9c4;
+    min-height: auto;
+    border-style: none !important;
+    font-weight: bold;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  footer {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap: 0.5em;
+  }
+
+  footer a {
+    color: blue;
+    text-decoration: underline;
+  }
+
+  .table1 {
+  float: left;
+  width: 75%;
+  margin: auto;
+  } 
+  
+}
